@@ -8,5 +8,7 @@ page d’ajout de commentaire. -->
 session_start();
 $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 
+$combdd = mysqli_query()
+
 
 ?>
