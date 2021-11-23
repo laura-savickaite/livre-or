@@ -8,7 +8,10 @@ page d’ajout de commentaire. -->
 session_start();
 $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 
-$combdd = mysqli_query()
+$combdd = mysqli_query($connect, "SELECT * FROM `commentaires`");
+$commentaire = mysqli_fetch_all($combdd, MYSQLI_ASSOC);
 
 
+
+var_dump ($commentaire);
 ?>
