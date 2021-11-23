@@ -23,9 +23,7 @@ $connect = mysqli_connect('localhost', 'root', '', 'livreor');
     $password=htmlentities(trim($password));
     $confpassword=htmlentities(trim($confpassword));
       
-    
 
-  
 
     if (empty($login)) {
       $validation=false;
