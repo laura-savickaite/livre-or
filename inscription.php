@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 
   
@@ -54,8 +54,8 @@ $connect = mysqli_connect('localhost', 'root', '', 'livreor');
   if ($validation){
   
     $queryInsert = mysqli_query($connect, "INSERT INTO `utilisateurs` (login, prenom, nom, password) VALUES ('$login', '$prenom', '$nom', '$password')"); 
-    header('Location:connexion.php');
-
+    header('Location:index.php');
+    $_SESSION['login']=$login;
   }
   }
   
@@ -97,7 +97,7 @@ $connect = mysqli_connect('localhost', 'root', '', 'livreor');
                     <button class="boutoninscription" onclick="window.location.href = 'connexion.php';" type="submit" name="connexion">Log in</button>
                 </div>
         </section>
-        
+
   </article>
 
             </main>
