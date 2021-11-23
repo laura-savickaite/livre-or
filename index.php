@@ -5,7 +5,20 @@ session_start();
 
 $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 
+$login=$_SESSION['login'];
 
+$request = mysqli_query($connect, "SELECT * FROM `utilisateurs` WHERE `login`= '".$login. "'"); 
+if(!isset($_SESSION['id'])){ ?>
+
+<a href="inscription.php"><p>Sign in</p></a>
+<a href="connexion.php"><p>Log in</p></a>
+<a href="livre-or.php"><p>Livre d'or</p></a>
+<?php
+}else { ?>
+<a href="profil.php"><p>Mon profil</p></a>
+<a href="livre-or.php"><p>Livre d'or</p></a>
+<?php
+}
 
 ?>
 

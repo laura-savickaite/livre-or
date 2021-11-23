@@ -31,8 +31,8 @@ $connect = mysqli_connect('localhost', 'root', '', 'livreor');
     }
     else {
         
-      $repLogin = mysqli_query($connect, "SELECT `login` FROM `utilisateurs` WHERE `login`= '".$login. "'"); 
-        if(mysqli_num_rows($repLogin)){
+      $reqLogin = mysqli_query($connect, "SELECT `login` FROM `utilisateurs` WHERE `login`= '".$login. "'"); 
+        if(mysqli_num_rows($reqLogin)){
           $validation=false;
           $loginErr .= "Ce nom d'utilisateur est déjà pris.";
       }
