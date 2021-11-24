@@ -12,14 +12,10 @@ $connect = mysqli_connect('localhost', 'root', '', 'livreor');
   if(isset($_POST['inscription'])){
     
     $login=$_POST['user_login'];
-    $prenom=$_POST['user_firstname'];
-    $nom=$_POST['user_lastname'];
     $password=$_POST['password'];
     $confpassword=$_POST['password2'];
     
     $login=htmlentities(trim($login));
-    $prenom=htmlentities(trim($prenom));
-    $nom=htmlentities(trim($nom));
     $password=htmlentities(trim($password));
     $confpassword=htmlentities(trim($confpassword));
       
@@ -51,7 +47,7 @@ $connect = mysqli_connect('localhost', 'root', '', 'livreor');
     
   if ($validation){
   
-    $queryInsert = mysqli_query($connect, "INSERT INTO `utilisateurs` (login, prenom, nom, password) VALUES ('$login', '$prenom', '$nom', '$password')"); 
+    $queryInsert = mysqli_query($connect, "INSERT INTO `utilisateurs` (login, password) VALUES ('$login', '$password')"); 
     header('Location:index.php');
     $_SESSION['login']=$login;
   }

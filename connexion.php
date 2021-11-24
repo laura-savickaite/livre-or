@@ -6,8 +6,13 @@ variables de session sont créées. -->
 <?php
 
 session_start();
+var_dump($_SESSION);
 
 $connect = mysqli_connect('localhost', 'root', '', 'livreor');
+
+// if(isset($_SESSION['login'])){
+//     header('Location:index.php');
+// }
 
 if (isset($_POST['connexion'])){
 

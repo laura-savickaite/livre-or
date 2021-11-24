@@ -21,7 +21,7 @@ $login=$_SESSION['login'];
     <header>
     <?php 
     $request = mysqli_query($connect, "SELECT * FROM `utilisateurs` WHERE `login`= '".$login. "'"); 
-    if(!isset($_SESSION['id'])){ ?>
+    if(!isset($_SESSION['login'])){ ?>
 
     <section class="navbar">
         <a href="inscription.php"><p>Sign in</p></a>
