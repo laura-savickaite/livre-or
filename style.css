@@ -32,7 +32,6 @@ a{
     display: flex;
     flex-direction: row;
     margin-left: 10%;
-    z-index: 1;
 }
 #titrescroll {
     transform: rotate(90deg); 
@@ -40,7 +39,10 @@ a{
     margin-top: -23%;
 
 }
-
+.boutondeco {
+    position: absolute;
+    left: 50%;
+}
 
 
 h1 {
@@ -74,6 +76,8 @@ hr{
     margin-top: -10%;
 
 }
+
+
 
 /* footer {
     background-color: rgb(206, 52, 52);

@@ -6,7 +6,16 @@ session_start();
 $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 
 $login=$_SESSION['login'];
+
+if(isset($_POST['deco'])){
+    session_destroy();
+}
 ?>
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +41,10 @@ $login=$_SESSION['login'];
     }else { ?>
     <section class="navbar">
         <a href="profil.php"><p>Mon profil</p></a>
-        <a href="livre-or.php"><p>Livre d'or</p></a>
+        <a href="livre-or.php"><p>Livre d'or</p></a> 
+        <form action="index.php" method="post">
+            <button class="boutondeco" type="submit" name="deco">Deconnexion</button>
+        </form>
     </section>
     <?php
     }
@@ -42,7 +54,10 @@ $login=$_SESSION['login'];
     <main>
     <section>
         <div class="indexcase">
-            hover ici ?
+            <div class="reveal">
+                
+            </div>
+
         </div>
 
     <marquee id="titrescroll" scrolldelay="90"><h1>UNGODLY  HOUR  RADIO</h1></marquee>
