@@ -11,20 +11,22 @@ $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 $combdd = mysqli_query($connect, "SELECT utilisateurs.login, commentaires.commentaire, commentaires.date  FROM `utilisateurs` INNER JOIN commentaires ON id_utilisateur=utilisateurs.id ORDER BY date DESC");
 $commentaire = mysqli_fetch_all($combdd, MYSQLI_ASSOC);
 
-var_dump($commentaire);
+// var_dump($commentaire);
 
-for($index=0; isset(($commentaire)[$index]) == true; $index++){
-    
-
-}
-
-    // foreach($commentaire as $commentaires){
-    //     var_dump ($commentaires);
-    //     echo $commentaires['login']; //ceci prend tous mes logins, il faut que je les différencie 
-    //     echo $commentaires['commentaire']; //pareil ici
-    //     echo $commentaires['date']; //pareil ici
+for($index=0; isset($commentaire[$index]) == true; $index++){
+    $arrays = $commentaire[$index];
+      var_dump ($arrays);
+    //    echo $index;  
+    // foreach($arrays as $commentaire){
+    // echo $commentaire['login'];
+    //  // pour chaque index je veux que tu me prennes ce qu'il y a dans son array
     // }
+ }
 
+
+        // je veux un foreach pour chaque index
+// foreach, ça va être pour un seul tableau
+    //il faut que j'individualise chaque tableau
 ?>
 
 <!DOCTYPE html>
@@ -73,3 +75,33 @@ for($index=0; isset(($commentaire)[$index]) == true; $index++){
     </table>
 </body>
 </html>
+
+
+<!-- $str="On n'est pas le meilleur quand on le croit mais quand on le sait";
+
+//$index=0; //mon index counter
+
+commentaire
+$dic=array (
+    array commentaire1 "consonnes" => ["n","t", "p", "s", "l", "m", "r", "q", "d"],
+    array commentaire 2"voyelles"=>["O", "o", "e", "a", "i", "u"]
+);
+
+    //var_dump ($dic);
+    $compteur=0;
+    $compteur2=0;
+
+for ($index=0; isset($str[$index])==true; $index++){
+    //["consonnes"] = seulement la précision de quel array dans dic et le [$cons] similaire à mon [$index] donc le vrai index
+    for ($cons=0; isset($dic["consonnes"][$cons])==true; $cons++){
+        if($str[$index]==$dic["consonnes"][$cons]){
+            $compteur++;
+        }
+    }
+
+    for ($voy=0; isset($dic["voyelles"][$voy])==true; $voy++){
+        if($str[$index]==$dic["voyelles"][$voy]){
+            $compteur2++;
+        }
+    }
+} -->
