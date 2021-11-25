@@ -10,9 +10,9 @@ var_dump($_SESSION);
 
 $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 
-// if(isset($_SESSION['login'])){
-//     header('Location:index.php');
-// }
+if(isset($_SESSION['login'])){
+    header('Location:index.php');
+}
 
 if (isset($_POST['connexion'])){
 
@@ -24,6 +24,8 @@ $requestLogin = mysqli_query($connect, "SELECT `login` FROM `utilisateurs` WHERE
     $requestPassword = mysqli_query($connect, "SELECT `password` FROM `utilisateurs` WHERE `login`= '".$login. "'"); 
         if(mysqli_num_rows($requestPassword)){
             $_SESSION['login']=$login;
+
+            header('Location:index.php');
     }else {
         $logErr="Le mot de passe ou le login ne correspondent pas.";
     }
@@ -43,7 +45,7 @@ if (isset($_POST['inscriptionbis'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Connexion || UC</title>
+    <title>Connexion || Ungodly Hour Radio</title>
 </head>
 <body>
     <main>

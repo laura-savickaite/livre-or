@@ -13,6 +13,63 @@ $commentaire = mysqli_fetch_all($combdd, MYSQLI_ASSOC);
 
 var_dump($commentaire);
 
+for($index=0; isset(($commentaire)[$index]) == true; $index++){
+    
 
+}
+
+    // foreach($commentaire as $commentaires){
+    //     var_dump ($commentaires);
+    //     echo $commentaires['login']; //ceci prend tous mes logins, il faut que je les différencie 
+    //     echo $commentaires['commentaire']; //pareil ici
+    //     echo $commentaires['date']; //pareil ici
+    // }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livre d'or || Ungodly Hour Radio</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <?php echo $commentaires['login']; ?>
+            </td>
+            <td>
+                <?php echo $commentaires['commentaire']; ?>
+            </td>
+            <td>
+                <?php echo $commentaires['date']; ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php echo $commentaires['login']; ?>
+            </td>
+            <td>
+                <?php echo $commentaires['commentaire']; ?>
+            </td>
+            <td>
+                <?php echo $commentaires['date']; ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php echo $commentaires['login']; ?>
+            </td>
+            <td>
+                <?php echo $commentaires['commentaire']; ?>
+            </td>
+            <td>
+                <?php echo $commentaires['date']; ?>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

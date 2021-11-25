@@ -6,6 +6,14 @@
     font-family: CastaThin;
     src: url(Fonts/Casta-Thin.otf);
 }
+@font-face {
+    font-family: Harmondsemibold;
+    src: url(Fonts/Harmond-SemiBoldCondensed.otf);
+}
+@font-face {
+    font-family: Wagonlight;
+    src: url(Fonts/Wagon-ExtraLight.otf);
+}
 
 body {
     margin: 0;
@@ -41,7 +49,14 @@ a{
 }
 .boutondeco {
     position: absolute;
-    left: 50%;
+    top: 7vh;
+    left: 80vw;
+    border: none;
+    color: rgb(252, 241, 224);
+    font-family: CastaThin;
+    background-color: rgb(43, 42, 42);
+    font-size: 25px;
+    cursor: pointer;
 }
 
 
@@ -61,12 +76,64 @@ h1 {
     border-left: 3px solid rgb(252, 241, 224);
   }
 
-.indexcase {
+
+
+ .indexcase {
     background-color: rgb(43, 43, 43);
     height: 600px;
     width: 50%;
     margin-left: 5%;
     margin-top: 2%;
+    position: relative;
+}
+#imgnb {
+    transform: rotate(-10deg);
+}
+#img1 {
+    transform: rotate(5deg);
+    bottom:90%;
+    right: 30%;
+}
+#img2 {
+    transform: rotate(-7deg);
+    position: absolute;
+    right: 5%;
+    bottom:50%;
+}
+#collage{
+    position: absolute;
+    top:20%;
+}
+/*.textindex {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    background: rgb(43, 43, 43);
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.indexcase:hover div{
+    visibility: visible;
+    opacity: 0.7; 
+} */
+h3 {
+    font-family: Wagonlight;
+    font-size: 2vw;
+    color: rgb(218, 200, 174);
+    position: absolute;
+    left: 60%;
+    bottom: 30%;
+
+}
+h2 {
+    color: rgb(250, 214, 164);
+    font-family: Harmondsemibold;
+    font-size: 7vw;    
+    position: absolute;
+    bottom: 1%;
+    left: 20%;
 }
 
 hr{

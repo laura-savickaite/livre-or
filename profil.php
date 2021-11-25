@@ -6,7 +6,7 @@ login et son mot de passe. -->
 session_start();
 $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 
-if(!isset($_SESSION['utilisateur_id'])){
+if(!isset($_SESSION['login'])){
     header('Location:index.php');
 }
 
@@ -28,7 +28,8 @@ if (isset($_POST['enregistrer'])){
 
      $queryUpdate = mysqli_query($connect, "UPDATE `utilisateurs` SET `login`='$newLogin', `password`='$newPassword' WHERE `login`= '".$_SESSION['utilisateur_login']."'");
 
-  header('Location:connexion.php');
+        $_SESSION['login']=$newLogin;
+        $_SESSION['password']=$newPassword;
   }
 
   if (isset($_POST['deco'])){

@@ -24,7 +24,7 @@ if(isset($_POST['deco'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Accueil || UC titre</title>
+    <title>Accueil || Ungodly Hour Radio</title>
 </head>
 <body>
     <header>
@@ -54,10 +54,13 @@ if(isset($_POST['deco'])){
     <main>
     <section>
         <div class="indexcase">
-            <div class="reveal">
-                
+            <div id="collage">
+                <img id="imgnb" src="Images/img3.jpeg" width="200px">
+                <img id="img1" src="Images/img1.jpeg" width="200px">
+                <img id="img2" src="Images/img2.jpeg" width="200px">
             </div>
-
+            <h3>Welcome to the</h3>
+            <h2>Ungodly Hour</h2>
         </div>
 
     <marquee id="titrescroll" scrolldelay="90"><h1>UNGODLY  HOUR  RADIO</h1></marquee>
