@@ -80,10 +80,8 @@ $connect = mysqli_connect('localhost', 'root', '', 'livreor');
       <article class="formsite">
 
         <section id="imagesinscription">
-          <div class="hovercolor">
            <img src="Images/imginscription2.jpeg" width="300px">
-          </div>
-          <img src="Images/imginscription.jpeg" width="300px">
+           <img src="Images/imginscription.jpeg" width="300px">
         </section>
 
         <section id="form_inscription">
