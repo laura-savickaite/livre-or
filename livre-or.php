@@ -15,12 +15,22 @@ $commentaire = mysqli_fetch_all($combdd, MYSQLI_ASSOC);
 
 for($index=0; isset($commentaire[$index]) == true; $index++){
     $arrays = $commentaire[$index];
-      var_dump ($arrays);
-    //    echo $index;  
-    // foreach($arrays as $commentaire){
-    // echo $commentaire['login'];
-    //  // pour chaque index je veux que tu me prennes ce qu'il y a dans son array
+    //   var_dump ($arrays);
+        // foreach($arrays as $comment){
+            echo ("
+            <div style='background-color: pink; width: 10%; border-radius: 3%;'>
+                <p>" . $arrays['login'] . " - <span style='color:grey;'>" . $arrays['date'] . "</span></p>
+                <div style=''>
+                <p>" . $arrays['commentaire'] . "</p>
+                </div>
+            </div>
+            ");
+     // pour chaque index je veux que tu me prennes ce qu'il y a dans son array
     // }
+    //   $alllogin=$arrays['login'];
+    //   var_dump($alllogin);
+    // //    echo $index;  
+
  }
 
 
@@ -35,44 +45,11 @@ for($index=0; isset($commentaire[$index]) == true; $index++){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Livre d'or || Ungodly Hour Radio</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <td>
-                <?php echo $commentaires['login']; ?>
-            </td>
-            <td>
-                <?php echo $commentaires['commentaire']; ?>
-            </td>
-            <td>
-                <?php echo $commentaires['date']; ?>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <?php echo $commentaires['login']; ?>
-            </td>
-            <td>
-                <?php echo $commentaires['commentaire']; ?>
-            </td>
-            <td>
-                <?php echo $commentaires['date']; ?>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <?php echo $commentaires['login']; ?>
-            </td>
-            <td>
-                <?php echo $commentaires['commentaire']; ?>
-            </td>
-            <td>
-                <?php echo $commentaires['date']; ?>
-            </td>
-        </tr>
-    </table>
+
 </body>
 </html>
 
