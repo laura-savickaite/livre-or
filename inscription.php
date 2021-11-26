@@ -69,31 +69,44 @@ $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 </head>
 <body>
     <header>
-      <p id="indexlien"> Back to the index</p>
+    <section class="navbar">
+        <a href="index.php"><p>Back to the index</p></a>
+    </section>
     </header>
 
     <main>
-    <article id="form_inscription">
+      <h2 class="titretion">Inscription</h2>
 
-      <section> 
-        <form action="inscription.php" method="post">
-              <label for="name">Login :</label>
-              <input type="text" id="login" name="user_login"> <p class="error1">*<?php echo $loginErr;?></p>
+      <article class="formsite">
 
-            <label for="msg">Mot de passe :</label>
-            <input type="password" id="pass" name="password" required><p class="error2"> *<?php echo $passwordErr;?></p>
-            <label for="msg">Confirmation du mot de passe :</label>
-            <input type="password" id="pass2" name="password2" required
-            ><?php echo $confpasswordErr;?>
-                  <div class="boutons">
-                    <button class="boutoninscription" type="submit" name="inscription">Sign in</button></form>
-                    <p id="comptetxt">Vous avez déjà un compte ? </p>
-                    
-                    <button class="boutoninscription" onclick="window.location.href = 'connexion.php';" type="submit" name="connexion">Log in</button>
-                </div>
+        <section id="imagesinscription">
+          <div class="hovercolor">
+           <img src="Images/imginscription2.jpeg" width="300px">
+          </div>
+          <img src="Images/imginscription.jpeg" width="300px">
         </section>
 
-  </article>
+        <section id="form_inscription">
+            <div class="cadreform">
+              <form action="inscription.php" method="post">
+                  <label for="name">Login :</label>
+                  <input type="text" id="login" name="user_login"> <p class="error1">*<?php echo $loginErr;?></p>
+
+                  <label for="msg">Mot de passe :</label>
+                  <input type="password" id="pass" name="password" required><p class="error2"> *<?php echo $passwordErr;?></p>
+                  <label for="msg">Confirmation du mot de passe :</label>
+                  <input type="password" id="pass2" name="password2" required
+                  ><?php echo $confpasswordErr;?>
+                        <div class="boutons">
+                          <button class="boutoninscription" type="submit" name="inscription">Sign in</button>
+                </form>
+                          <p id="comptetxt">Vous avez déjà un compte ? </p>
+                          
+                          <button class="boutoninscription" onclick="window.location.href = 'connexion.php';" type="submit" name="connexion">Log in</button>
+                      </div>
+              </div>
+         </section>
+</article>
 
             </main>
             

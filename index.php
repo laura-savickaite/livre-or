@@ -60,7 +60,7 @@ if(isset($_POST['deco'])){
                 <img id="img2" src="Images/img2.jpeg" width="200px">
             </div>
             <h3>Welcome to the</h3>
-            <h2>Ungodly Hour</h2>
+            <h2 id="nomsite">Ungodly Hour</h2>
         </div>
 
     <marquee id="titrescroll" scrolldelay="90"><h1>UNGODLY  HOUR  RADIO</h1></marquee>
