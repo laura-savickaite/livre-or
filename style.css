@@ -26,13 +26,14 @@
     src: url(Fonts/faktum.otf);
 }
 
+
 /* GENERAL */
 
 body {
     margin: 0;
     padding: 0;
     background-color: rgb(46, 46, 46);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 header {
@@ -71,6 +72,8 @@ a{
     font-size: 25px;
     cursor: pointer;
 }
+
+
 
 /* INDEX */
 
@@ -156,6 +159,8 @@ hr{
     margin-top: -10%;
 
 }
+
+
 
 /* INSCRIPTION */
 
@@ -254,6 +259,50 @@ button {
     top: 33vh;
 }
 
+
+
+/* CONNEXION */
+
+.formbg {
+    background-color: rgb(43, 43, 43);
+    width: 40vw;
+    height: 60vh;
+    margin-top: 5%;
+    margin-left: 10vw;
+}
+
+.connectimg {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-left: 6vw;
+}
+.imgconnexion {
+    margin-top: 3vh;
+}
+.imgdroite {
+    position: absolute;
+    left: 80vw;
+    top: 35vh;
+}
+
+.boutons1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: -4vw;
+    margin-top: 5vh;
+}
+
+.centertxt {
+    margin-left: 12vw;
+    margin-top: 15vh;
+}
+
+.error2 {
+    position: absolute;
+
+}
 
 /* footer {
     background-color: rgb(206, 52, 52);

@@ -6,7 +6,6 @@ variables de session sont créées. -->
 <?php
 
 session_start();
-var_dump($_SESSION);
 
 $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 
@@ -17,14 +16,18 @@ if(isset($_SESSION['login'])){
 if (isset($_POST['connexion'])){
 
     $login=$_POST['user_login'];
+    $password=$_POST['password'];
+  
+    $login=htmlentities(trim($login));
+    $password=htmlentities(trim($password));
 
-$requestLogin = mysqli_query($connect, "SELECT `login` FROM `utilisateurs` WHERE `login`= '".$login. "'"); 
+    $RequestLogin = mysqli_query($connect, "SELECT `login` FROM `utilisateurs` WHERE `login`= '".$login. "'"); 
 
-    if(mysqli_num_rows($requestLogin)){
-    $requestPassword = mysqli_query($connect, "SELECT `password` FROM `utilisateurs` WHERE `login`= '".$login. "'"); 
-        if(mysqli_num_rows($requestPassword)){
+    if(mysqli_num_rows($RequestLogin)){
+    $RequestPassword = mysqli_query($connect, "SELECT `password` FROM `utilisateurs` WHERE `password`= '".$password. "'"); 
+
+        if(mysqli_num_rows($RequestPassword)){
             $_SESSION['login']=$login;
-
             header('Location:index.php');
     }else {
         $logErr="Le mot de passe ou le login ne correspondent pas.";
@@ -48,19 +51,38 @@ if (isset($_POST['inscriptionbis'])){
     <title>Connexion || Ungodly Hour Radio</title>
 </head>
 <body>
+    <header>
+        <section class="navbar">
+            <a href="index.php"><p>Back to the index</p></a>
+        </section>
+    </header>
     <main>
-        <form action="connexion.php" method="post">
-              <label for="name">Login :</label>
-              <input type="text" id="login" name="user_login">
+    <article class="formsite">
+        <section class="connectimg">
+            <img class="imgconnexion" src="Images/polaroid.jpeg" width="200px">
+            <img class="imgconnexion" src="Images/polaroid1.jpeg" width="200px">
+        </section>
+        <section class="formbg">
+            <form action="connexion.php" method="post">   
+                <div class="centertxt">
+                    <label for="name">Login :</label>
+                    <input type="text" id="login" name="user_login">
 
-            <label for="msg">Mot de passe :</label>
-            <input type="password" id="pass" name="password" required><p class="error2"> *<?php echo $logErr;?></p>
-                  <div class="boutons">
-                    <button class="boutonform" type="submit" name="connexion">Log in</button>
-                </form>
+                    <label for="msg">Mot de passe :</label>
+                    <input type="password" id="pass" name="password" required> <span class="error2"><?php echo $logErr;?></span>
+                </div>
+            <img class="imgdroite" src="Images/polaroid2.jpeg" width="200px">
+        
+                    <div class="boutons1">
+                        <button class="boutonform" type="submit" name="connexion">Log in</button>
+            </form>
+        
 
                     <p id="comptetxt">Vous n'avez pas de compte ? </p>    
-                    <input class="boutonform" type="submit" name="inscriptionbis">Sign in</input>
+                    <button class="boutonform" type="submit" name="inscriptionbis">Sign in</button>
+                 </div>
+        </section>
+    </article>
     </main>
 </body>
 </html>

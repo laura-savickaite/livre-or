@@ -1,5 +1,4 @@
 <?php
-session_start();
 $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 
   
@@ -48,8 +47,7 @@ $connect = mysqli_connect('localhost', 'root', '', 'livreor');
   if ($validation){
   
     $queryInsert = mysqli_query($connect, "INSERT INTO `utilisateurs` (login, password) VALUES ('$login', '$password')"); 
-    header('Location:index.php');
-    $_SESSION['login']=$login;
+    header('Location:connexion.php');
   }
   }
   
