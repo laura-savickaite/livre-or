@@ -57,6 +57,7 @@ if (isset($_POST['inscriptionbis'])){
         </section>
     </header>
     <main>
+    <h2 class="titretion">Connexion</h2>
     <article class="formsite">
         <section class="connectimg">
             <img class="imgconnexion" src="Images/polaroid.jpeg" width="200px">
@@ -78,7 +79,7 @@ if (isset($_POST['inscriptionbis'])){
             </form>
         
 
-                    <p id="comptetxt">Vous n'avez pas de compte ? </p>    
+                    <p id="comptetxt1">Vous n'avez pas de compte ? </p>    
                     <button class="boutonform" type="submit" name="inscriptionbis">Sign in</button>
                  </div>
         </section>

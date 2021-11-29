@@ -33,7 +33,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(46, 46, 46);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 header {
@@ -267,7 +267,7 @@ button {
     background-color: rgb(43, 43, 43);
     width: 40vw;
     height: 60vh;
-    margin-top: 5%;
+    margin-top: 4%;
     margin-left: 10vw;
 }
 
@@ -291,7 +291,7 @@ button {
     flex-direction: row;
     justify-content: center;
     margin-left: -4vw;
-    margin-top: 5vh;
+    margin-top: 10vh;
 }
 
 .centertxt {
@@ -300,9 +300,23 @@ button {
 }
 
 .error2 {
-    position: absolute;
-
+    display: flex;
+    flex-direction: column;
 }
+
+#comptetxt1 {
+    position: absolute;
+    left: 52vw;
+    top: 55vh;
+}
+
+
+
+/* Livre d'or */
+
+
+
+
 
 /* footer {
     background-color: rgb(206, 52, 52);
