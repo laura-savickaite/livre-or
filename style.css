@@ -17,6 +17,14 @@
     font-family: Wagonlight;
     src: url(Fonts/Wagon-ExtraLight.otf);
 }
+@font-face {
+    font-family: Wagonbold;
+    src: url(Fonts/Wagon-Bold.otf);
+}
+@font-face {
+    font-family: Faktum;
+    src: url(Fonts/faktum.otf);
+}
 
 /* GENERAL */
 
@@ -24,7 +32,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(46, 46, 46);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 header {
@@ -167,9 +175,15 @@ hr{
 
 #imagesinscription{
     margin-left: 7%;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
+#imginscription {
+    position: absolute;
+    left: 15%;
+    bottom: 10%;
+    transform: rotate(5deg);
+}
 
 .cadreform {
     background-color: rgb(43, 43, 43);
@@ -184,9 +198,60 @@ label {
     color: blanchedalmond;
     display: flex;
     flex-direction: column;
+    margin-top: 2vh;
+
 }
 input{
     border: none;
+    background-color: rgb(43, 43, 43);
+    border-bottom: 1px solid;
+    margin-top: 2vh;
+
+}
+.centerform {
+padding-top: 7%;
+margin-left: 35%;
+}
+
+button {
+    border: none;
+    font-family: Wagonbold;
+    background-color: rgb(43, 43, 43);
+    color: blanchedalmond;
+    font-size: 20px;
+    margin-left: 9%;
+    cursor: pointer;
+}
+.boutons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    justify-content: center;
+    margin-right: 10%;
+}
+#comptetxt {
+    position: absolute;
+    left: 70vw;
+    top: 57vh;
+    margin-top: 2%;
+    font-family: Faktum;
+    color: rgb(104, 96, 84);
+}
+
+.error {
+    position: absolute;
+    right: 25vw;
+    top: 31vh;
+}
+.error1 {
+    position: absolute;
+    right: 25vw;
+    top: 40vh;
+}
+.msgerror {
+    position: absolute;
+    right: 9vw;
+    top: 33vh;
 }
 
 

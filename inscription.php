@@ -80,21 +80,23 @@ $connect = mysqli_connect('localhost', 'root', '', 'livreor');
       <article class="formsite">
 
         <section id="imagesinscription">
+           <img id="imginscription" src="Images/imginscription.jpeg" width="300px">
            <img src="Images/imginscription2.jpeg" width="300px">
-           <img src="Images/imginscription.jpeg" width="300px">
         </section>
 
         <section id="form_inscription">
             <div class="cadreform">
               <form action="inscription.php" method="post">
+                <div class="centerform">
                   <label for="name">Login :</label>
-                  <input type="text" id="login" name="user_login"> <p class="error1">*<?php echo $loginErr;?></p>
+                  <input type="text" id="login" name="user_login"> <p class="error">*</p><span class="msgerror"><?php echo $loginErr;?></span>
 
                   <label for="msg">Mot de passe :</label>
-                  <input type="password" id="pass" name="password" required><p class="error2"> *<?php echo $passwordErr;?></p>
+                  <input type="password" id="pass" name="password" required><p class="error1"> *</p><span class="msgerror"><?php echo $passwordErr;?></span>
                   <label for="msg">Confirmation du mot de passe :</label>
                   <input type="password" id="pass2" name="password2" required
                   ><?php echo $confpasswordErr;?>
+            </div>
                         <div class="boutons">
                           <button class="boutoninscription" type="submit" name="inscription">Sign in</button>
                 </form>
