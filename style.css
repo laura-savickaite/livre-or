@@ -430,6 +430,30 @@ button {
     color: rgb(201, 182, 154);
 }
 
+/* Commentaire */
+
+.formbackg {
+    background-color: rgb(43, 43, 43);
+    width: 40vw;
+    height: 60vh;
+    margin-top: 4%;
+    margin-left: 15vw;
+}
+.center {
+    padding-left: 25%;
+    padding-top: 25%;
+}
+
+.boutonform {
+    margin-top: 5%;
+    margin-left: 17%;
+}
+.imgcomm {
+    position: absolute;
+    left: 60%;
+    top: 55%;
+}
+
 /* footer {
     background-color: rgb(206, 52, 52);
     padding-top: 1%;
