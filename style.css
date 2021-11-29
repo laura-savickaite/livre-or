@@ -211,7 +211,13 @@ input{
     background-color: rgb(43, 43, 43);
     border-bottom: 1px solid;
     margin-top: 2vh;
+    color: burlywood;
+    font-family: Faktum;
 
+}
+input:focus{
+    outline-offset: 0px;
+    outline: none;
 }
 .centerform {
 padding-top: 7%;
@@ -302,21 +308,127 @@ button {
 .error2 {
     display: flex;
     flex-direction: column;
+    font-family: Faktum;
 }
 
 #comptetxt1 {
     position: absolute;
     left: 52vw;
     top: 55vh;
+    font-family: Faktum;
 }
 
 
 
 /* Livre d'or */
 
+#prlelivredor {
+    overflow: scroll;
+    scroll-behavior: smooth;
 
+}
+/* pour que le scroll ne se voit pas */
+::-webkit-scrollbar{
+    display: none;
+    scroll-behavior: scroll;
+}
 
+#livreor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+  .marquee {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 95px;
+    overflow-x: hidden;
+    border-bottom: 2px solid blanchedalmond;
+    border-top: 2px solid blanchedalmond;
+    overflow: hidden;
+    color: blanchedalmond;
+    font-size: 80px;
+    font-family: Harmondsemibold;
+  }
+  
+  .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 32s linear infinite;
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 
+.bubble {
+    position: relative;
+    font-family: Faktum;
+    font-size: 18px;
+    line-height: 24px;
+    width: 200px;
+    background: rgb(233, 222, 204);
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+    color: #000;
+  }
+  
+  .bubble-bottom-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 20px solid rgb(233, 222, 204);
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgb(233, 222, 204);
+    border-bottom: 20px solid transparent;
+    left: 32px;
+    bottom: -15px;
+  }
+
+.bulletxt {
+    margin-top: 5vh;
+}
+.bulletxt {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes slideInUp {
+    0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+    }
+    @keyframes slideInUp {
+    0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+    } 
+
+.author {
+    font-family: CastaThin;
+    color: rgb(201, 182, 154);
+}
 
 /* footer {
     background-color: rgb(206, 52, 52);

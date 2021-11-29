@@ -13,30 +13,6 @@ $commentaire = mysqli_fetch_all($combdd, MYSQLI_ASSOC);
 
 // var_dump($commentaire);
 
-for($index=0; isset($commentaire[$index]) == true; $index++){
-    $arrays = $commentaire[$index];
-    //   var_dump ($arrays);
-        // foreach($arrays as $comment){
-            echo ("
-            <div style='background-color: pink; width: 10%; border-radius: 3%;'>
-                <p>" . $arrays['login'] . " - <span style='color:grey;'>" . $arrays['date'] . "</span></p>
-                <div style=''>
-                <p>" . $arrays['commentaire'] . "</p>
-                </div>
-            </div>
-            ");
-     // pour chaque index je veux que tu me prennes ce qu'il y a dans son array
-    // }
-    //   $alllogin=$arrays['login'];
-    //   var_dump($alllogin);
-    // //    echo $index;  
-
- }
-
-
-        // je veux un foreach pour chaque index
-// foreach, ça va être pour un seul tableau
-    //il faut que j'individualise chaque tableau
 ?>
 
 <!DOCTYPE html>
@@ -48,8 +24,49 @@ for($index=0; isset($commentaire[$index]) == true; $index++){
     <link rel="stylesheet" href="style.css">
     <title>Livre d'or || Ungodly Hour Radio</title>
 </head>
-<body>
+<body id="prlelivredor">
+    <header>
+        <section class="navbar">
+            <a href="index.php"><p>Back to the index</p></a>
+        </section>
+    </header> 
+    <?php 
+        if(isset($_SESSION['login'])){ ?>
+    <div class="marquee">
+        <div class="track">
+        <a href="commentaire.php"><div class="content">&nbsp;Add a comment   //   Add a comment   //   Add a comment   //   Add a comment   //   Add a comment   //   Add a comment   //   Add a comment   //   Add a comment   //   </div></a>
+        </div>
+    </div>
+<?php }else { ?>
+        <div class="marquee">
+        <div class="track">
+            <a href="connexion.php"><div class="content">&nbsp;Log in to add a comment // Log in to add a comment // Log in to add a comment // Log in to add a comment // Log in to add a comment // Log in to add a comment //  </div></a>
+        </div>
+    </div>
+<?php } ?>
+    <main id="livreor">
 
+    <!-- <div id="scroll-container">
+    <div class="scroll-text">Log in to add a comment.</div>
+    </div> -->
+        <?php
+    for($index=0; isset($commentaire[$index]) == true; $index++){
+    $arrays = $commentaire[$index];?>
+
+            <div class="bulletxt">
+                <div class="bubble bubble-bottom-left">
+                    <div id="scroll-container">
+                        <div id="scroll-text">
+                        <p><?php echo $arrays['commentaire']; ?></p>
+                    </div>  
+                    <div class="author">           
+                        <p><?php echo $arrays['login']; ?> - <span style='color:grey;'><?php  echo $arrays['date']; ?></span></p>
+                    </div> 
+                </div>
+            </div>
+<?php
+ } ?>
+    </main>
 </body>
 </html>
 
