@@ -322,10 +322,9 @@ button {
 
 /* Livre d'or */
 
-#prlelivredor {
+ #prlelivredor {
     overflow: scroll;
     scroll-behavior: smooth;
-
 }
 /* pour que le scroll ne se voit pas */
 ::-webkit-scrollbar{
@@ -452,6 +451,36 @@ button {
     position: absolute;
     left: 60%;
     top: 55%;
+}
+
+
+/* Profil */
+.layout {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+
+}
+.centered {
+    padding-top: 6%;
+    padding-left: 25%;
+}
+
+.boutons1 {
+    margin-right: 120px;
+}
+
+#pourimage {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(43, 43, 43);
+    width: 23vw;
+    height: 30vh;
+    margin-top: 15%;
+}
+.boutonsauv {
+    margin-top: 7vh;
+    margin-left: 5vw;
 }
 
 /* footer {

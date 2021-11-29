@@ -9,9 +9,6 @@ session_start();
 
 $connect = mysqli_connect('localhost', 'root', '', 'livreor');
 
-if(isset($_SESSION['login'])){
-    header('Location:index.php');
-}
 
 if (isset($_POST['connexion'])){
 
@@ -20,6 +17,13 @@ if (isset($_POST['connexion'])){
   
     $login=htmlentities(trim($login));
     $password=htmlentities(trim($password));
+
+    //ces informations récoltées sont utilisées dans profil.php
+    $repTest = mysqli_query($connect, "SELECT * FROM `utilisateurs` WHERE `login`= '".$login."'");
+    $rTest = mysqli_fetch_all($repTest,MYSQLI_ASSOC);
+    foreach ($rTest as $value){    
+    $_SESSION['imgprofil']=$value ['imgprofil'];
+    }
 
     $RequestLogin = mysqli_query($connect, "SELECT `login` FROM `utilisateurs` WHERE `login`= '".$login. "'"); 
 

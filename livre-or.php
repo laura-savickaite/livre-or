@@ -45,7 +45,7 @@ $commentaire = mysqli_fetch_all($combdd, MYSQLI_ASSOC);
     </div>
 <?php } ?>
     <main id="livreor">
-
+    <img id="imgprofil" src="Uploads/<?php echo $_SESSION['imgprofil']; ?>" alt="Profile picture" class='profil' width="100px" height="100px">
     <!-- <div id="scroll-container">
     <div class="scroll-text">Log in to add a comment.</div>
     </div> -->
