@@ -37,7 +37,7 @@ FOOTER */
     src: url(Fonts/Wagon-Bold.otf);
 }
 @font-face {
-    font-family: Faktum;
+    font-family: Faktum, sans-serif;
     src: url(Fonts/faktum.otf);
 }
 
@@ -376,7 +376,7 @@ button {
 
 .bubble {
     position: relative;
-    font-family: Faktum;
+    font-family: Faktum, sans-serif;
     font-size: 18px;
     line-height: 24px;
     width: 200px;
