@@ -75,7 +75,7 @@ if(isset($_POST['deco'])){
     </section>
     </main>
     <footer>
-
+        <a href="https://github.com/laura-savickaite/livre-or"><img class="logo" src="Images/github.png"></a>
     </footer>
 </body>
 </html>

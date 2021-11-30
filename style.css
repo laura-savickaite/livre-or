@@ -1,4 +1,19 @@
 
+/* SOMMAIRE
+
+FONTS
+GENERAL
+INDEX
+INSCRIPTION
+CONNEXION
+LIVRE D'OR
+COMMENTAIRE
+PROFIL 
+FOOTER */
+
+
+
+
 /* FONTS */
 
 @font-face {
@@ -120,20 +135,7 @@ h1 {
     position: absolute;
     top:20%;
 }
-/*.textindex {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    visibility: hidden;
-    opacity: 0;
-    background: rgb(43, 43, 43);
-    -webkit-transition: visibility 0s, opacity 0.5s linear; 
-    transition: visibility 0s, opacity 0.5s linear;
-}
-.indexcase:hover div{
-    visibility: visible;
-    opacity: 0.7; 
-} */
+
 h3 {
     font-family: Wagonlight;
     font-size: 2vw;
@@ -159,6 +161,7 @@ hr{
     margin-top: -10%;
 
 }
+
 
 
 
@@ -267,6 +270,7 @@ button {
 
 
 
+
 /* CONNEXION */
 
 .formbg {
@@ -320,7 +324,8 @@ button {
 
 
 
-/* Livre d'or */
+
+/* LIVRE D'OR */
 
  #prlelivredor {
     overflow: scroll;
@@ -443,7 +448,10 @@ button {
 
 }
 
-/* Commentaire */
+
+
+
+/* COMMENTAIRE */
 
 .formbackg {
     background-color: rgb(43, 43, 43);
@@ -468,7 +476,10 @@ button {
 }
 
 
-/* Profil */
+
+
+
+/* PROFIL */
 .layout {
     display: flex;
     flex-direction: row-reverse;
@@ -484,13 +495,13 @@ button {
     margin-right: 120px;
 }
 
-.pourimage {
+#pourimage {
     display: flex;
     flex-direction: column;
     background-color: rgb(43, 43, 43);
     width: 23vw;
     height: 40vh;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 .boutonsauv {
     margin-top: 7vh;
@@ -503,10 +514,11 @@ button {
     margin-left: 20%;
 }
 
-/* footer {
-    background-color: rgb(206, 52, 52);
-    padding-top: 1%;
 
-    saturate(896%)
-    sepia(100%)
-} */
+
+/* FOOTER */
+
+.logo {
+    margin-top: 15vh;
+    margin-left: 50px;
+}
