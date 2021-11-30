@@ -7,7 +7,7 @@ page d’ajout de commentaire. -->
 <?php
 session_start();
 // $connect = mysqli_connect('localhost', 'root', '', 'livreor');
-$connect = mysqli_connect('localhost', 'laurasavickaite', 'Lilirosesa1997.', 'laura-savickaite_livreor');
+$connect = mysqli_connect('localhost', 'laura-savickaite', 'heliosmapuce0407', 'laura-savickaite_livreor');
 
 $combdd = mysqli_query($connect, "SELECT utilisateurs.login, commentaires.commentaire, commentaires.date, utilisateurs.imgprofil  FROM `utilisateurs` INNER JOIN commentaires ON id_utilisateur=utilisateurs.id ORDER BY commentaires.id DESC");
 $commentaire = mysqli_fetch_all($combdd, MYSQLI_ASSOC);
