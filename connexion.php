@@ -7,7 +7,8 @@ variables de session sont créées. -->
 
 session_start();
 
-$connect = mysqli_connect('localhost', 'root', '', 'livreor');
+// $connect = mysqli_connect('localhost', 'root', '', 'livreor');
+$connect = mysqli_connect('localhost', 'laurasavickaite', 'Lilirosesa1997.', 'laura-savickaite_livreor');
 
 
 if (isset($_POST['connexion'])){

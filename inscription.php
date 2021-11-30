@@ -1,5 +1,6 @@
 <?php
-$connect = mysqli_connect('localhost', 'root', '', 'livreor');
+// $connect = mysqli_connect('localhost', 'root', '', 'livreor');
+$connect = mysqli_connect('localhost', 'laurasavickaite', 'Lilirosesa1997.', 'laura-savickaite_livreor');
 
   
   
