@@ -72,10 +72,6 @@ if (isset($_POST['enregistrer'])){
       }
   }
 
-  if (isset($_POST['deco'])){
-    header('Location:index.php');
-    session_destroy();
-  }
 
 
 ?>
@@ -93,7 +89,7 @@ if (isset($_POST['enregistrer'])){
     <header>
         <section class="navbar">
             <a href="index.php"><p>Back to the index</p></a>
-            <form action="index.php" method="post">
+            <form action="deconnexion.php" method="post">
                 <button class="boutondeco" type="submit" name="deco">Deconnexion</button>
             </form>
         </section>
