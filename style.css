@@ -364,6 +364,11 @@ button {
     to { transform: translateX(-50%); }
   }
 
+.formimgtxt {
+    display: flex;
+    flex-direction: row;
+}
+
 .bubble {
     position: relative;
     font-family: Faktum;
@@ -393,6 +398,7 @@ button {
 .bulletxt {
     margin-top: 5vh;
 }
+
 .bulletxt {
     -webkit-animation-name: slideInUp;
     animation-name: slideInUp;
@@ -427,6 +433,14 @@ button {
 .author {
     font-family: CastaThin;
     color: rgb(201, 182, 154);
+}
+
+.imageprof {
+    border-radius: 20em;
+    border: solid 1px rgb(231, 189, 127);
+    margin-right: 2vw;
+    margin-top: 3vh;
+
 }
 
 /* Commentaire */
@@ -470,17 +484,23 @@ button {
     margin-right: 120px;
 }
 
-#pourimage {
+.pourimage {
     display: flex;
     flex-direction: column;
     background-color: rgb(43, 43, 43);
     width: 23vw;
-    height: 30vh;
-    margin-top: 15%;
+    height: 40vh;
+    margin-top: 10%;
 }
 .boutonsauv {
     margin-top: 7vh;
     margin-left: 5vw;
+}
+
+.imgprofil {
+    border-radius: 20em;
+    border: solid 1px rgb(231, 189, 127);
+    margin-left: 20%;
 }
 
 /* footer {

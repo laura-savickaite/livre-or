@@ -11,7 +11,7 @@ if(!isset($_SESSION['login'])){
     header('Location:index.php');
 }
 
-
+// ici le code pour rajouter l'image de profil, pour plus de détails voire le projet module connexion sur git
 if (isset($_POST['sauvimg'])){
   $file=$_FILES['profilImg'];
   $fileName=$_FILES['profilImg']['name'];
@@ -72,9 +72,10 @@ if (isset($_POST['enregistrer'])){
   }
 
   if (isset($_POST['deco'])){
+    header('Location:index.php');
     session_destroy();
-    header('Location:connexion.php');
   }
+
 
 ?>
 
@@ -98,7 +99,7 @@ if (isset($_POST['enregistrer'])){
     </header>
     <main class="layout">
       <article id="pourimage">
-      <img id="imgprofil" src="Uploads/<?php echo $_SESSION['imgprofil']; ?>" alt="Profile picture" class='profil' width="200px" height="200px">
+      <img class="imgprofil" src="Uploads/<?php echo $_SESSION['imgprofil']; ?>" alt="Profile picture" class='profil' width="200px" height="200px">
             <form action="profil.php" method="POST" enctype="multipart/form-data">
                   <input type="file" name="profilImg">
                   <span><?php echo $profilErr; echo $pictureErr; echo $sizeErr; ?></span>
