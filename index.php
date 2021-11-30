@@ -9,9 +9,7 @@ $connect = mysqli_connect('localhost', 'laurasavickaite', 'Lilirosesa1997.', 'la
 
 $login=$_SESSION['login'];
 
-if(isset($_POST['deco'])){
-    session_destroy();
-}
+
 ?>
 
 
@@ -44,7 +42,7 @@ if(isset($_POST['deco'])){
     <section class="navbar">
         <a href="profil.php"><p>Mon profil</p></a>
         <a href="livre-or.php"><p>Livre d'or</p></a> 
-        <form action="index.php" method="post">
+        <form action="deconnexion.php" method="post">
             <button class="boutondeco" type="submit" name="deco">Deconnexion</button>
         </form>
     </section>
