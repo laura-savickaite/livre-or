@@ -75,7 +75,7 @@ if (isset($_POST['inscriptionbis'])){
                     <input type="text" id="login" name="user_login">
 
                     <label for="msg">Mot de passe :</label>
-                    <input type="password" id="pass" name="password" required> <span class="error2"><?php echo $logErr;?></span>
+                    <input type="password" id="pass" name="password" required> <span class="error2"><?php echo @$logErr;?></span>
                 </div>
             <img class="imgdroite" src="Images/polaroid2.jpeg" width="200px">
         

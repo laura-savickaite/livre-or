@@ -88,13 +88,13 @@ $connect = mysqli_connect('localhost', 'laurasavickaite', 'Lilirosesa1997.', 'la
               <form action="inscription.php" method="post">
                 <div class="centerform">
                   <label for="name">Login :</label>
-                  <input type="text" id="login" name="user_login"> <p class="error">*</p><span class="msgerror"><?php echo $loginErr;?></span>
+                  <input type="text" id="login" name="user_login"> <p class="error">*</p><span class="msgerror"><?php echo @$loginErr;?></span>
 
                   <label for="msg">Mot de passe :</label>
-                  <input type="password" id="pass" name="password" required><p class="error1"> *</p><span class="msgerror"><?php echo $passwordErr;?></span>
+                  <input type="password" id="pass" name="password" required><p class="error1"> *</p><span class="msgerror"><?php echo @$passwordErr;?></span>
                   <label for="msg">Confirmation du mot de passe :</label>
                   <input type="password" id="pass2" name="password2" required
-                  ><?php echo $confpasswordErr;?>
+                  ><?php echo @$confpasswordErr;?>
             </div>
                         <div class="boutons">
                           <button class="boutoninscription" type="submit" name="inscription">Sign in</button>

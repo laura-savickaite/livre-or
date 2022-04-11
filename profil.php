@@ -52,25 +52,37 @@ if (isset($_POST['sauvimg'])){
   }
 }
 
-if (isset($_POST['enregistrer'])){
+if (isset($_POST['enregistrer'])){        
+
       $newLogin = $_POST['user_login'];
       $newPassword = $_POST['password'];
       $newConfpass = $_POST['password2'];
 
       if ($newConfpass !== $newPassword) {
         $confpasswordErr .= "Le mot de passe et sa confirmation ne sont pas les mêmes.";
-      }
+      }  
+      
+      $Login = mysqli_query($connect, "SELECT `login` FROM `utilisateurs` WHERE `login`= '".$_SESSION['login']."'");
+        if(mysqli_num_rows($Login)){
+          $querUpdate = mysqli_query($connect, "UPDATE `utilisateurs` SET `password`='$newPassword' WHERE `login`= '".$_SESSION['login']."'");
+        }
+
 
       $rpLogin = mysqli_query($connect, "SELECT `login` FROM `utilisateurs` WHERE `login`= '".$newLogin."'");
         if(mysqli_num_rows($rpLogin)){
           $loginErr .= "Ce nom d'utilisateur est déjà pris.";
-        }else {
+        } 
+        else {
      $queryUpdate = mysqli_query($connect, "UPDATE `utilisateurs` SET `login`='$newLogin', `password`='$newPassword' WHERE `login`= '".$_SESSION['login']."'");
 
         $_SESSION['login']=$newLogin;
         $_SESSION['password']=$newPassword;
-      }
-  }
+        }
+
+
+      } 
+
+  
 
 
 
